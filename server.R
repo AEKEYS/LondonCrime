@@ -1,15 +1,8 @@
 library(shiny); require(rCharts); require(dplyr)
 options(RCHART_WIDTH = 800)
 
-#source("londonData.R")
-
-##### visuals ####
-
-suppressPackageStartupMessages(library(googleVis))
-M <- gvisMotionChart(crimeEmployment, 'Borough','Year', options = list(width=600, height=400))
-# plot(M)
-# print(M, "chart") #if using in slidify
-
+#This file is for the Shiny App server calculations.
+#It receives input from and outputs to the UI file.
 
 ##### server.R #####
 
@@ -29,7 +22,7 @@ shinyServer(
                   Borough~as.integer(Year), 
                   value.var = "Population")
         })
-        
+        #Not currently displayed in the UI
         output$mapImage <- renderImage({
             list(src = "boroughs.png",
                  alt = "Borough Map",

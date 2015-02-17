@@ -1,10 +1,11 @@
-#Readable by both UI and Server
+#This file reads in and cleans up the data for use by
+#both the UI and Server files (Shiny App).
 
 library(reshape2); library(tidyr); library(dplyr)
 
-# http://data.london.gov.uk/dataset/london-borough-profiles
+# Original data obtained from:
 url <- "http://data.london.gov.uk/dataset/london-borough-profiles/resource/445fbb06-8945-499b-b1e6-1933afa3c642"
-# Selected population, crime, employment, and wellbeing columns from sheets 1 and 2 and saved to CSV
+# I selected population, crime, employment, and wellbeing columns from sheets 1 and 2 and saved to CSV
 
 #####READ IN DATA####
 

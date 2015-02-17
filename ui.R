@@ -1,7 +1,9 @@
 library(shiny); require(rCharts)
 options(RCHART_LIB='morris')
 
-#source("londonData.R") #run script that loads and cleans data
+#User Interface file for Shiny App.
+#User selects a Borough and an employment rate to compare with crime for that area.
+#Figures are expressed as a percentage of the selected Borough's population.
 
 ## ui.R
 shinyUI(pageWithSidebar(
